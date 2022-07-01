@@ -52,7 +52,7 @@ let info = [{
     type:"Loft",
     bedrooms:"2 Bedroom",
 },{
-    picture: "./images/apartment1.jpg",
+    picture: "./images/apartment3.jpg",
     price:6800,
     propertyName: "Vatican Studio",
     location: "Rome",
@@ -112,7 +112,7 @@ function homify(land){
         
         <div  class="card-body">
         <p class="card-text"> 
-             ${e.location}</p>
+        <i class="bi bi-geo-alt-fill"></i>${e.location}</p>
         <hr>
             $${e.price} 
         <br> ${e.bedrooms}</p> 
