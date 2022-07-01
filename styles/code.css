@@ -1,0 +1,206 @@
+html {
+    scroll-behavior: smooth;
+}
+
+#landing{
+    height: 100vh;
+    width: 100%;
+    background-color:white;
+}
+
+#picture{
+    background-image: url("../images/28640-interior-design-style-town-city-apartment-bathroom-kitchen-4k.jpg"), linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5));
+    background-blend-mode: overlay;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    height: 90vh;
+}
+
+#land{
+    color: antiquewhite;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 120px ;
+    
+    
+}
+h1{
+    font-size: 40px;
+    font-weight: 500px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.con1{
+    height: 70vh;
+    
+
+}
+
+.cardie{
+    /* width: 1150px; */
+    
+   height:fit-content;
+   margin: auto;
+   background-color:#999;
+   border-style: outset;
+   border: solid 3px black ;
+   box-shadow: rgba(0, 0, 0, 0.6) 10px 10px 5px;
+   border-radius: 5px;
+  
+}
+
+#button{
+    width: 170px; 
+    height: 58px;  
+    /* margin: auto; */
+}
+#input-size{
+    width: 200px;
+    height: 6px;
+    padding: 15px;
+    
+}
+
+#input-size select{
+    width: 170px;
+    height: 40px;
+}
+
+#properties{
+    padding-top: 50px;
+    background-color:white;
+}
+
+
+select{
+   color: #999;
+}
+
+
+
+option{
+    color: black;
+}
+#footer{
+
+    text-align: center;
+    background-color:#999;
+    height: 15vh;
+    padding: 25px;
+} 
+#header{
+    text-align: center;
+    background-color:#999;
+    height: 10vh;
+
+}
+
+h2{
+    font-size: 35px;
+    font-weight: 500px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+    
+
+}
+
+/* #ikhlaas{
+    /* display: flex;
+    flex-direction: column;
+    align-content: center;
+    padding: 50px; */ 
+
+
+
+.back {
+height: 200px;
+display: flex;
+    align-items: flex-end;
+    text-align: center;
+}
+
+
+.card-title{
+    color:blanchedalmond;
+    padding-left:  15px;
+    padding-right: 15px;
+    font-size: 25px;
+    background-color: rgba(0, 0, 0,0.6) ;
+    width:fit-content;
+    height: 35px;
+    border-radius: 5px;
+} 
+
+.card{
+    box-shadow: rgba(0, 0, 0, 0.2) 10px 10px 5px;
+}
+
+.title-word {
+    animation: color-animation 2s linear infinite;
+  }
+  
+  .title-word-1 {
+    --color-1: #999;
+    --color-2: #3D8DAE;
+    --color-3: black;
+  }
+  
+  .title-word-2 {
+    --color-1: black;
+    --color-2: darkblue;
+    --color-3: maroon;
+  }
+/*   
+  .title-word-3 {
+    --color-1: #ACCFCB;
+    --color-2: #E4A9A8;
+    --color-3: #ACCFCB;
+  }
+  
+  .title-word-4 {
+    --color-1: #3D8DAE;
+    --color-2: #DF8453;
+    --color-3: #E4A9A8;
+  } */
+  
+  @keyframes color-animation {
+    0%    {color: var(--color-1)}
+    32%   {color: var(--color-1)}
+    33%   {color: var(--color-2)}
+    65%   {color: var(--color-2)}
+    66%   {color: var(--color-3)}
+    99%   {color: var(--color-3)}
+    100%  {color: var(--color-1)}
+  }
+  
+
+    
+  
+  
+  .title {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
+    /* font-size: 8.5vw;
+    text-transform: uppercase; */
+  }
+
+  /* h2.title{
+    margin: 0px 0px 0px;
+  } */
+
+  .edit{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+    font-weight:600;
+  }
+
+  p.edit{
+    margin: auto;
+  }
+
+  body{
+    overflow-x: hidden;
+  }
