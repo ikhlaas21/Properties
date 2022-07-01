@@ -1,7 +1,5 @@
 const container = document.getElementById("ikhlaas");
 
-// let info = ["charles","Saleem","Raees"]
-
 let info = [{
     picture:"./images/apartment1.jpg" ,
     price: 8000,

@@ -179,9 +179,10 @@ display: flex;
   /* Here are just some visual styles. 🖌 */
   
    .word {
+
     place-items: center;  
     text-align: center;
-   }
+   }  
   
   
   .title {
@@ -208,3 +209,55 @@ display: flex;
   body{
     overflow-x: hidden;
   }
+
+  fix{
+    margin: auto;
+  }
+
+  @media screen and (max-width :706px) {
+    tr {
+        display: flex;
+        flex-direction: column;
+
+
+    }
+}
+@media screen and (max-width :706px) {
+    #properties{
+        padding-top: 150px;
+        background-color:white;
+    }
+    
+}
+  
+@media screen and (max-width :1025px) {
+    #properties{
+        padding-top: 100px;
+        background-color:white;
+    }
+    
+}
+
+ @media screen and (max-width :426px) {
+    #properties {
+        padding-top: 200px;
+
+
+    }
+}
+
+@media screen and (max-width :376px) {
+    #properties {
+        padding-top: 400px;
+
+
+    }
+}
+
+@media screen and (max-width :321px) {
+    #properties {
+        padding-top: 450px;
+
+
+    }
+} 

@@ -1,150 +1,104 @@
-let properties = JSON.parse(localStorage.getItem("property"))
-  ? JSON.parse(localStorage.getItem("property"))
-  : [
-      {
-        id: 1,
-        type: "Residential",
-        location: "Rondebosch East",
-        address: "Metro Plaza Dr",
-        picture: `../image/res1.jpg`,
-        bedrooms: 3,
-        bathrooms: 2,
-        garage: 3,
-        price: 7000,
-      },
-      {
-        id: 2,
-        type: "Apartment",
-        address: "65 Lawson Rd",
-        location: "Belgravia",
-        picture: `../image/apt1.jpg`,
-        bedrooms: 1,
-        bathrooms: 1,
-        garage: 1,
-        price: 5000,
-      },
-      {
-        id: 3,
-        type: "Apartment",
-        address: "Quincy St",
-        location: "Jupiter",
-        picture: `../image/apt2.jpg`,
-        bedrooms: 3,
-        bathrooms: 2,
-        garage: 3,
-        price: 9500,
-      },
-      {
-        id: 4,
-        type: "Commercial",
-        address: "65 Lawson Rd",
-        location: "Leeward",
-        picture: `../image/cmrcl2.jpg`,
-        bedrooms: 1,
-        bathrooms: 1,
-        garage: 1,
-        price: 5000,
-      },
-      {
-        id: 5,
-        type: "Apartment",
-        address: "87-656 Farrington Highway A",
-        location: "Jupiter",
-        picture: `../image/res2.jpg`,
-        bedrooms: 1,
-        bathrooms: 1,
-        garage: 1,
-        price: 5000,
-      },
-      {
-        id: 6,
-        type: "Residential",
-        address: "41-157 Nalu Street",
-        location: "Rondebosh East",
-        picture: `../image/res3.jpg`,
-        bedrooms: 1,
-        bathrooms: 1,
-        garage: 1,
-        price: 5000,
-      },
-      {
-        id: 7,
-        type: "Apartment",
-        address: "87-1409 Akowai Road",
-        location: "Belgravia",
-        picture: `../image/apt3.jpg`,
-        bedrooms: 1,
-        bathrooms: 1,
-        garage: 1,
-        price: 5000,
-      },
-      {
-        id: 8,
-        type: "Commercial",
-        address: "1946 Pauoa Road A",
-        location: "Athlone",
-        picture: `../image/cmrcl3.webp`,
-        bedrooms: 1,
-        bathrooms: 1,
-        garage: 1,
-        price: 5000,
-      },
-      {
-        id: 9,
-        type: "Residential",
-        address: "87-280 Laulele Street",
-        location: "Leeward",
-        picture: `../image/res4.jpg`,
-        bedrooms: 4,
-        bathrooms: 4,
-        garage: 5,
-        price: 10000,
-      },
-      {
-        id: 10,
-        type: "Commercial",
-        address: " 85-929 midway Street",
-        location: "Belgravia",
-        picture: `../image/cmrcl4.jpg`,
-        bedrooms: 2,
-        bathrooms: 2,
-        garage: 3,
-        price: 7800,
-      },
-      {
-        id: 11,
-        type: "Apartment",
-        address: "87-1013 Kahiwelola Street",
-        location: "Leeward",
-        picture: `../image/apt4.jpg`,
-        bedrooms: 3,
-        bathrooms: 2,
-        garage: 1,
-        price: 9000,
-      },
-      {
-        id: 12,
-        type: "Commercial",
-        location: "Athlone",
-        address: "8100 S Ashland Ave",
-        picture: `../image/cmrcl1.jpg`,
-        bedrooms: 2,
-        bathrooms: 3,
-        garage: 2,
-        price: 5000,
-      },
-    ];
+let info = JSON.parse(localStorage.getItem("props"))
+  ? JSON.parse(localStorage.getItem("props"))
+  : 
+  [{
+    price: 8000,
+    propertyName: "Mockingbird Place",
+    location: "Manhattan" ,
+    continent:"North America",
+    type:"Apartment",
+    bedrooms:"3",
+
+},{
+    price:4500,
+    propertyName: "Palm Street Apartments",
+    location: "Los Angeles" ,
+    continent:"North America",
+    type:"Apartment",
+    bedrooms:"2",
+},{
+    price:6000,
+    propertyName: "Phoenix Feather",
+    location: "Toronto" ,
+    continent:"North America",
+    type:"Apartment",
+    bedrooms:"1",
+},{
+    price:8000,
+    propertyName: "Designer Loft",
+    location: "Lisbon",
+    continent:"Europe",
+    type:"Loft",
+    bedrooms:"2",
+},{
+    price:8500,
+    propertyName: "The Catalan",
+    location:"Barcelona" ,
+    continent:"Europe",
+    type:"Loft",
+    bedrooms:"3",
+},{
+    price:9250,
+    propertyName: "Odeon Tower Loft",
+    location: "Athens",
+    continent:"Europe",
+    type:"Loft",
+    bedrooms:"2",
+},{
+    price:6800,
+    propertyName: "Vatican Studio",
+    location: "Rome",
+    continent:"Europe",
+    type:"Studio",
+    bedrooms:"1",
+},{
+    price:8500,
+    propertyName: "Fleur de Lis",
+    location: "Paris",
+    continent:"Europe",
+    type:"Studio",
+    bedrooms:"2",
+},{
+    price:7500,
+    propertyName: "Rave Studio",
+    location: "Prague",
+    continent:"Europe",
+    type:"Studio",
+    bedrooms:"2",
+},{
+    price:4800,
+    propertyName: "Night Owl Penthouse",
+    location: "New York",
+    continent:"North America",
+    type:"Penthouse",
+    bedrooms:"3",
+},{
+    price:4000,
+    propertyName: "Beachfront Penthouse",
+    location:"Berlin" ,
+    continent:"Europe",
+    type:"Penthouse",
+    bedrooms:"3",
+},{
+    price:3800,
+    propertyName: "The Avenue Penthouse",
+    location: "Cape Town",
+    continent:"Africa",
+    type:"Penthouse",
+    bedrooms:"2", 
+}];
+
 let display = document.getElementById("tbody");
 
-function loadData() {
-  display.innerHTML = "";
-  properties.forEach((item, index) => {
+function homify() {
+  display.innerHTML =" ";
+  info.forEach((e, index) => {
     display.innerHTML += `
     <tr>
-    <th scope="row">${item.id}</th>
-    <td>${item.address}</td>
-    <td>${item.type}</td>
-    <td>${item.location}</td>
+    <th scope="row">${e.type}</th>
+    <td>${e.continent}</td>
+    <td>${e.bedrooms}</td>
+    <td>${e.price}</td>
     <!-- icons -->
     <td>
     <!-- Update -->
@@ -159,7 +113,7 @@ function loadData() {
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">${item.address}</h5>
+            <h5 class="modal-title" id="exampleModalLabel">${e.location}</h5>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
         <div class="modal-body">
@@ -167,11 +121,11 @@ function loadData() {
         <div class="col-6">
             <!-- Address -->
                 <div class="mb-3">
-                    <label for="editTitle${index}" class="form-label">Address</label>
+                    <label for="editTitle${index}" class="form-label">Location</label>
                     <input class="form-control" type="text"
                     name="editTitle${index}"
                     id="editTitle${index}"
-                    value="${item.address}"/>
+                    value="${e.location}"/>
                 </div>
     
             <!-- Type -->
@@ -180,16 +134,16 @@ function loadData() {
                     <input class="form-control" type="text"
                     name="editType${index}"
                     id="editType${index}"
-                    value="${item.type}"/>
+                    value="${e.type}"/>
                 </div>
     
             <!-- Location -->
                 <div class="mb-3">
-                    <label for="editLocation${index}" class="form-label">Location</label>
+                    <label for="editLocation${index}" class="form-label">Continent</label>
                     <input class="form-control" type="text"
                     name="editLocation${index}"
                     id="editLocation${index}"
-                    value="${item.location}"/>
+                    value="${e.continent}"/>
                 </div>
     
             <!-- picture -->
@@ -198,7 +152,7 @@ function loadData() {
                     <input class="form-control" type="text"
                     name="editPic${index}"
                     id="editPic${index}"
-                    value="${item.picture}"/>
+                    value="${e.picture}"/>
                 </div>
             </div>
             
@@ -209,26 +163,12 @@ function loadData() {
                     <input class="form-control" type="text"
                     name="editRooms${index}"
                     id="editRooms${index}"
-                    value="${item.bedrooms}"/>
+                    value="${e.bedrooms}"/>
                 </div>
                 
-            <!-- bathrooms -->
-                <div class="mb-3">
-                    <label for="editBath${index}" class="form-label">Bathrooms</label>
-                    <input class="form-control" type="text"
-                    name="editBath${index}"
-                    id="editBath${index}"
-                    value="${item.bathrooms}"/>
-                </div>
+           
     
-            <!-- garage -->
-                <div class="mb-3">
-                    <label for="editGarage${index}" class="form-label">Garage Space</label>
-                    <input class="form-control" type="text"
-                    name="editGarage${index}"
-                    id="editGarage${index}"
-                    value="${item.garage}"/>
-                </div>
+           
     
             <!-- price -->
                 <div class="mb-3">
@@ -236,7 +176,7 @@ function loadData() {
                     <input class="form-control" type="text"
                     name="editPrice${index}"
                     id="editPrice${index}"
-                    value="${item.price}"/>
+                    value="${e.price}"/>
                 </div>
             </div>
          </div> 
@@ -251,9 +191,9 @@ function loadData() {
     </div>
     `;
   });
-console.table(properties)
+console.table(info)
 }
-loadData();
+homify();
 
 // Sort
 function sort() {
@@ -265,19 +205,16 @@ document.getElementById('btnSort').addEventListener('click', sort)
 function addItem() {
   // e.preventDefault();
   // Push to Array
-  properties.push({
-    id: properties.length + 1,
-    type : document.getElementById('addType').value,
-    location : document.getElementById('addLocation').value,
-    address : document.getElementById('addAddress').value,
-    picture : document.getElementById('addPicture').value,
-    bedrooms : parseInt(document.getElementById('addRooms').value),
-    bathrooms : parseInt(document.getElementById('addBathrooms').value),
-    garage : parseInt(document.getElementById('addGarage').value),
-    price : parseInt(document.getElementById('addPrice').value),
+  info.push({
+    // id: properties.length + 1,
+    type : document.getElementById('typeof').value,
+    location : document.getElementById('place').value,
+    picture : document.getElementById('test55').value,
+    bedrooms : parseInt(document.getElementById('beds').value),
+    continent : parseInt(document.getElementById('place').value),
+    price : parseInt(document.getElementById('money').value),
   });
-  localStorage.setItem("property", JSON.stringify(properties));
-  loadData();
+  localStorage.setItem("props", JSON.stringify(info));
 }
 
 // UPDATE
@@ -285,25 +222,21 @@ function updateProperty(id) {
   console.log("Im being clicked");
   // variables for edited values
   let etype = document.getElementById(`editType${id}`).value;
-  let elocation = document.getElementById(`editLocation${id}`).value;
-  let eaddress = document.getElementById(`editTitle${id}`).value;
+  let econtinent = document.getElementById(`editContinent${id}`).value;
+
   let epicture = document.getElementById(`editPic${id}`).value;
   let ebedrooms = document.getElementById(`editRooms${id}`).value;
-  let ebathrooms = document.getElementById(`editBath${id}`).value;
-  let egarage = document.getElementById(`editGarage${id}`).value;
+  
   let eprice = document.getElementById(`editPrice${id}`).value;
 
   // passing edited values into array
-    properties[id].type = etype
-    properties[id].location = elocation
-    properties[id].address = eaddress
-    properties[id].picture = epicture
-    properties[id].bedrooms = parseInt(ebedrooms)
-    properties[id].bathrooms = parseInt(ebathrooms)
-    properties[id].garage = parseInt(egarage)
-    properties[id].price = parseInt(eprice)
-    localStorage.setItem("property", JSON.stringify(properties));
-    loadData();
+    info[id].type = etype
+    info[id].location = econtinent
+    info[id].picture = epicture
+    info[id].bedrooms = parseInt(ebedrooms)
+    info[id].price = parseInt(eprice)
+    localStorage.setItem("props", JSON.stringify(info));
+    homify();
   };
 
 // DELETE
@@ -314,7 +247,7 @@ function deleteItem(id) {
   for (i = 0; i < properties.length; i++) {
     properties[i].id = i + 1;
   }
-  localStorage.setItem("property", JSON.stringify(properties));
+  localStorage.setItem("props", JSON.stringify(info));
   loadData();
 }
 document.getElementById("delete").addEventListener("click", deleteItem);
@@ -325,9 +258,8 @@ document.getElementById("footer").innerHTML += `
 <div class="container">
   <div class="row w-100">
       <div class="col-12 d-flex justify-content-between">
-        <p><i class="fa-solid fa-location-dot"></i> Property 420</p>
         
-        <i>&copyAbdus-Samad Charles ${Year}</i>
+        <h6>Copyright &copy;Ikhlaas Rawoot 2022. All rights reserved</h6>
         <div>
           <a href="" class="mx-1 text-black">
           <i class="fa-brands fa-github">
