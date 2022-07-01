@@ -176,8 +176,12 @@ display: flex;
     100%  {color: var(--color-1)}
   }
   
-
-    
+  /* Here are just some visual styles. 🖌 */
+  
+   .word {
+    place-items: center;  
+    text-align: center;
+   }
   
   
   .title {
